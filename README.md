@@ -11,21 +11,20 @@ AutoRefactor helps you find small, high-impact refactors in Python code safely a
 
 ## Quick Start
 
-1. **Create & activate virtual environment**
-
+### Create & activate virtual environment
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 
-    Install dependencies
+Install dependencies
 
 pip install -r requirements.txt
 
-    Run analyzer
+Run analyzer
 
 python -m autorefactor.cli examples/messy_example.py
 
-    Write conservative, reviewable refactors
+Write conservative, reviewable refactors
 
 python -m autorefactor.cli examples/messy_example.py --apply
 
@@ -36,7 +35,7 @@ Before:
 for i in range(len(items)):
     print(items[i])
 
-After (.refactored candidate):
+After (candidate .refactored):
 
 for i, __val in enumerate(items):
     print(__val)
