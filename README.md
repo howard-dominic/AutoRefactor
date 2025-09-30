@@ -15,31 +15,32 @@ AutoRefactor helps you find small, high-impact refactors in Python code safely a
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
+```
 
 Install dependencies
-
+```
 pip install -r requirements.txt
-
+```
 Run analyzer
-
+```
 python -m autorefactor.cli examples/messy_example.py
-
+```
 Write conservative, reviewable refactors
-
+```
 python -m autorefactor.cli examples/messy_example.py --apply
-
+```
 Example Before / After
 
 Before:
-
+```
 for i in range(len(items)):
     print(items[i])
-
+```
 After (candidate .refactored):
-
+```
 for i, __val in enumerate(items):
     print(__val)
-
+```
 Contributing
 
     Add new rule modules under autorefactor/ (prefix: rules_)
