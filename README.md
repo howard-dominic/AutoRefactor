@@ -12,6 +12,7 @@ AutoRefactor helps you find small, high-impact refactors in Python code safely a
 ## Quick Start
 
 1. **Create & activate virtual environment**
+
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
@@ -35,7 +36,7 @@ Before:
 for i in range(len(items)):
     print(items[i])
 
-After (candidate .refactored):
+After (.refactored candidate):
 
 for i, __val in enumerate(items):
     print(__val)
